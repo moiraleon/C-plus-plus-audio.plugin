@@ -165,7 +165,7 @@ void SimpleEQAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     juce::dsp::ProcessContextReplacing<float> rightContext(rightBlock);
     
     leftChain.process(leftContext);
-    rightChain.process(rightContext);
+    rightChain.process(rightContext); 
 }
 
 //==============================================================================
