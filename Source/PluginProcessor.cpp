@@ -113,6 +113,8 @@ void SimpleEQAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
                                                                                 chainSettings.peakFreq,
                                                                                 chainSettings.peakQuality, juce::Decibels::decibelsToGain(chainSettings.peakGainInDecibels)); 
     
+    *leftChain.get<ChainPositions::Peak>().coefficients = *peakCoefficients;
+    *rightChain.get<ChainPositions::Peak>().coefficients = *peakCoefficients;
 }
 
 void SimpleEQAudioProcessor::releaseResources()
